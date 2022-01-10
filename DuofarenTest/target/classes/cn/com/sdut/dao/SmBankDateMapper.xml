@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.com.sdut.dao.SmBankDateMapper">
+    <select id="selectByPrimaryKey" resultType="cn.com.sdut.domain.SmBankDate" parameterType="string">
+    select BK_NO as BKNO , PREV_ACCT_DT as PREVACCTDT, ACCT_DT as ACCTDT, NEXT_ACCT_DT as NEXTACCTDT, ALDY_TM as ALDYTM, FST_EXPD_VAL as FSTEXPDVAL, SEC_EXPD_VAL as SECEXPDVAL,
+    TRD_EXPD_VAL
+    from sm_bank_date
+    where BK_NO = #{bkNo}
+    </select>
+</mapper>
